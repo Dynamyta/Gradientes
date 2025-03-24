@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+        linear-gradient( color, color, ... )	Gradiente de colores (hacia abajo).
+        linear-gradient( dirección, color, color, ... )	Gradiente con dirección específica.
+        linear-gradient( dirección, color tamaño, color tamaño, ... )	Se indica donde comienza a cambiar el color.
+        linear-gradient( dirección, color tamaño tamaño, color tamaño tamaño, ... )	Se indica inicio y fin de cada color.*/
+
+        body, div{
+            margin-top: 20px;
+        }
+
+        div{
+            width: 600px;
+            height: 100px;
+       
+        }
+
+    .element {
+        background-image: linear-gradient(blue, red, yellow);
+        }
+
+        .element2 {
+            background-image: linear-gradient(to right, blue, red);
+        }
+
+        .element3{
+            background-image: linear-gradient(to right, blue, yellow, red);
+        }
+
+        .element4{
+            background-image: linear-gradient(45deg, blue, yellow, red);
+        }
+
+        .element5 {
+            /* Básico, con colores con distancias equilibradas */
+            background: linear-gradient(to right, black, blue, gold, green, red);
+        }
+            
+        .element6{
+            /* Equivalente al anterior */
+            background:linear-gradient(
+                        to right,
+                        black 0%,     /* Color 100% negro en el punto 0% y comienza a cambiar */
+                        blue 25%,     /* Color 100% azul en el punto 25% y comienza a cambiar */
+                        gold 50%,     /* Color 100% dorado en el punto 50% y comienza a cambiar */
+                        green 75%,    /* Color 100% verde en el punto 75% y comienza a cambiar */
+                        red 100%      /* Color 100% rojo en el punto 100% */
+                        );
+        }
+
+        .element7 {
+  
+
+  /* Delimitando los colores con corte brusco */
+  background:
+    linear-gradient(
+      to right,
+      black 0% 25%,   /* Color negro desde 0% hasta 25%, sin degradación */
+      blue 25% 50%,   /* Color azul desde 25% hasta 50%, sin degradación */
+      gold 50% 75%,   /* Color dorado desde 50% hasta 75%, sin degradación */
+      green 75% 100%  /* Color verde desde 75% hasta 100%, sin degradación */
+    );
+        }
+
+        .element8{
+  /* Equivalente al anterior */
+  background:
+    linear-gradient(
+      to right,
+      black 25%,      /* Si se omite, el punto de partida, al ser el primer color es 0% */
+      blue 25% 50%,
+      gold 50% 75%,
+      green 75%       /* Si se omite, el punto de final, al ser el último color es 100% */
+    );
+}
+
+    .element9{
+  background:
+    linear-gradient(
+      to right,
+      blue 0 10%,
+      yellow 10% 20%,
+      red 20% 30%,
+      blue 30% 40%,
+      yellow 40% 50%,
+      red 50% 60%,
+      blue 60% 70%,
+      yellow 70% 80%,
+      red 80% 90%,
+      blue 90% 100%
+    );
+    }
+
+    .element10{
+  /* La propiedad anterior, se puede resumir: */
+  background:
+    repeating-linear-gradient(
+        to right,
+      blue 0 10%,
+      yellow 10% 20%,
+      red 20% 30%
+    );
+}
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="element"></div>
+    <div class="element2"></div>
+    <div class="element3"></div>
+    <div class="element4"></div>
+    <div class="element5"></div>
+    <div class="element6"></div>
+    <div class="element7"></div>
+    <div class="element8"></div>
+    <div class="element9"></div>
+    <div class="element10"></div>
+
+</body>
+</html>
